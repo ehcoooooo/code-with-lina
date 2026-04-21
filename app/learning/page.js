@@ -4,12 +4,13 @@ import { ArrowLeftIcon } from '@heroicons/react/24/outline';
 
 export default function Learning() {
   const tools = [
-    { name: 'DataWorks', desc: '一站式大数据开发平台', icon: '🔧' },
-    { name: 'MaxCompute', desc: '大规模分布式计算引擎', icon: '⚡' },
+    { name: '阿里云大数据平台', desc: 'DataWorks + MaxCompute 一站式大数据开发平台', icon: '☁️' },
+    { name: 'MapReduce', desc: '分布式批处理框架', icon: '📊' },
     { name: 'Flink', desc: '流处理框架', icon: '🌊' },
     { name: 'Kafka', desc: '分布式流处理平台', icon: '📨' },
     { name: 'QuickBI', desc: '商业分析工具', icon: '📊' },
-    { name: '通义灵码', desc: 'AI 辅助编程工具', icon: '🤖' }
+    { name: '通义灵码', desc: 'AI 辅助编程工具', icon: '🤖' },
+    { name: 'Claude Code', desc: 'AI 编程助手', icon: '🤖' }
   ];
 
   const books = [
@@ -91,7 +92,7 @@ export default function Learning() {
       </main>
 
       <footer className="text-center py-8 text-white/50 text-sm">
-        <p>© {new Date().getFullYear()} 张丽娜。Made with React & Tailwind CSS</p>
+        <p>© 2026 Lina Zhang. All rights reserved</p>
       </footer>
     </div>
   );

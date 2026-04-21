@@ -9,43 +9,43 @@ const translations = {
   zh: {
     name: '张丽娜',
     title: '大数据开发工程师',
-    subtitle: '6 年经验 · 可立即到岗',
+    subtitle: '',
     description: '精通阿里云 DataWorks、MaxCompute，擅长离线数仓建模、ETL 开发、性能调优。深耕市场营销广告商业化、新能源汽车数字化营销领域。',
     contact: {
-      phone: '+86 18438631368',
+      phone: '+86 184-3863-1368',
       email: '18438631368@163.com',
       location: '中国上海'
     },
-    explore: '探索我的旅程',
+    explore: '探索',
     strengths: '核心优势',
     skills: '专业技能',
     experience: '工作经历',
     experienceItems: [
-      { company: '前程无忧', position: '大数据开发工程师', period: '2024.01 - 2026.04', desc: '营销活动数据全流程开发，SQL 性能优化从 1.5 小时至 20 分钟' },
-      { company: '镁信健康', position: '大数据开发工程师', period: '2022.04 - 2024.01', desc: '药企数据中台建设，支持 100+ 药企项目，效率提升 50%' },
-      { company: '数跑科技', position: '大数据开发工程师', period: '2021.03 - 2022.04', desc: '新能源汽车数据报表体系，形成 3 大明细宽表' },
-      { company: '仙豆智能', position: '大数据开发工程师', period: '2019.07 - 2021.03', desc: '用户画像数仓建设，支撑运营精准推送' },
+      { company: '前程无忧', companyEn: '51job', position: '', period: '2024.01 - 2026.04', desc: '营销活动数据全流程开发，SQL 性能优化从 1.5 小时至 20 分钟' },
+      { company: '镁信健康', companyEn: 'MediTrust Health', position: '', period: '2022.04 - 2024.01', desc: '药企数据中台建设，支持 100+ 药企项目，效率提升 50%' },
+      { company: '数跑科技', companyEn: 'Supaur.com', position: '', period: '2021.03 - 2022.04', desc: '新能源汽车数据报表体系，形成 3 大明细宽表' },
+      { company: '仙豆智能', companyEn: 'Bean Tech', position: '', period: '2019.07 - 2021.03', desc: '用户画像数仓建设，支撑运营精准推送' },
     ]
   },
   en: {
-    name: 'Zhang Lina',
+    name: 'Lina Zhang',
     title: 'Big Data Engineer',
-    subtitle: '6 Years Experience · Available Immediately',
+    subtitle: '',
     description: 'Proficient in Alibaba Cloud DataWorks, MaxCompute. Expert in data warehouse modeling, ETL development, and performance tuning. Specialized in marketing advertising and new energy vehicle digital marketing.',
     contact: {
-      phone: '+86 18438631368',
+      phone: '+86 184-3863-1368',
       email: '18438631368@163.com',
       location: 'Shanghai, China'
     },
-    explore: 'Explore My Journey',
+    explore: 'Explore',
     strengths: 'Core Strengths',
     skills: 'Professional Skills',
     experience: 'Work Experience',
     experienceItems: [
-      { company: '51job', position: 'Big Data Engineer', period: '2024.01 - 2026.04', desc: 'Marketing campaign data development, optimized SQL performance from 1.5h to 20min' },
-      { company: 'MediTrust Health', position: 'Big Data Engineer', period: '2022.04 - 2024.01', desc: 'Pharma data platform, supported 100+ pharma projects, 50% efficiency improvement' },
-      { company: 'Shupao Technology', position: 'Big Data Engineer', period: '2021.03 - 2022.04', desc: 'New energy vehicle data reporting system, created 3 major detail tables' },
-      { company: 'Xian Dou Intelligent', position: 'Big Data Engineer', period: '2019.07 - 2021.03', desc: 'User persona data warehouse, supported precision marketing campaigns' },
+      { company: '51job', companyEn: '51job', position: '', period: '2024.01 - 2026.04', desc: 'Marketing campaign data development, optimized SQL performance from 1.5h to 20min' },
+      { company: 'MediTrust Health', companyEn: 'MediTrust Health', position: '', period: '2022.04 - 2024.01', desc: 'Pharma data platform, supported 100+ pharma projects, 50% efficiency improvement' },
+      { company: '数跑科技', companyEn: 'Supaur.com', position: '', period: '2021.03 - 2022.04', desc: 'New energy vehicle data reporting system, created 3 major detail tables' },
+      { company: '仙豆智能', companyEn: 'Bean Tech', position: '', period: '2019.07 - 2021.03', desc: 'User persona data warehouse, supported precision marketing campaigns' },
     ]
   }
 };
@@ -179,11 +179,6 @@ function SelfIntro({ onExploreClick, lang }) {
           {t.title}
         </p>
 
-        {/* 副标题 */}
-        <p className="text-white/50 text-base mb-6 font-light">
-          {t.subtitle}
-        </p>
-
         {/* 简介文字 */}
         <p className="text-white/50 text-base md:text-lg leading-relaxed max-w-lg mb-8 font-light">
           {t.description}
@@ -248,21 +243,16 @@ function CoreStrengths({ lang }) {
   return (
     <div className="relative z-10 max-w-5xl mx-auto mt-32 animate-scale-in delay-300 px-4">
       <h2 className="text-3xl font-light text-center mb-12 gradient-text">✨ {t.strengths}</h2>
-      <div className="grid md:grid-cols-3 gap-6">
+      <div className="grid md:grid-cols-2 gap-6">
         <div className="glass p-8 rounded-2xl">
           <div className="text-3xl mb-3">🚀</div>
-          <h3 className="font-medium mb-2">6 {lang === 'zh' ? '年数据开发经验' : 'Years Experience'}</h3>
-          <p className="text-white/60 text-sm font-light">{lang === 'zh' ? '精通阿里云 DataWorks、MaxCompute，擅长离线数仓建模、ETL 开发、性能调优' : 'Expert in Alibaba Cloud DataWorks, MaxCompute, data warehouse modeling and ETL development'}</p>
-        </div>
-        <div className="glass p-8 rounded-2xl">
-          <div className="text-3xl mb-3">🎯</div>
-          <h3 className="font-medium mb-2">{lang === 'zh' ? '行业专精' : 'Industry Expertise'}</h3>
-          <p className="text-white/60 text-sm font-light">{lang === 'zh' ? '深耕市场营销广告商业化、新能源汽车数字化营销领域' : 'Specialized in marketing advertising and new energy vehicle digital marketing'}</p>
+          <h3 className="font-medium mb-2">{lang === 'zh' ? '数据开发经验' : 'Data Development Experience'}</h3>
+          <p className="text-white/60 text-sm font-light">{lang === 'zh' ? '6 年大数据开发经验，精通数仓分层建模、全链路 ETL 开发与 SQL 性能调优，具备从需求沟通、数据探查、分层设计到数据落地交付的完整实战能力；熟练掌握数据质量治理、任务运维与资源优化，保障日均亿级数据稳定产出。' : '6 years of big data development experience. Expert in data warehouse layered modeling, full-link ETL development, and SQL performance tuning. Proven track record from requirements gathering, data exploration, layered design to data delivery. Skilled in data quality governance, task operations, and resource optimization, ensuring stable daily output of hundreds of millions of records.'}</p>
         </div>
         <div className="glass p-8 rounded-2xl">
           <div className="text-3xl mb-3">🤖</div>
           <h3 className="font-medium mb-2">{lang === 'zh' ? 'AI 协同开发' : 'AI-Assisted Development'}</h3>
-          <p className="text-white/60 text-sm font-light">{lang === 'zh' ? '熟练使用 AI 工具辅助开发，日均处理亿级数据' : 'Proficient in AI tools for development, processing hundreds of millions of records daily'}</p>
+          <p className="text-white/60 text-sm font-light">{lang === 'zh' ? '精通 AI 辅助开发工具，显著提升需求交付效率，如 Claude Code、通义灵码。' : 'Proficient in AI-assisted development tools such as Claude Code and Tongyi Lingma, significantly improving requirement delivery efficiency.'}</p>
         </div>
       </div>
     </div>
@@ -281,8 +271,7 @@ function WorkExperience({ lang }) {
           <div key={idx} className="glass p-6 rounded-2xl hover:bg-white/10 transition-colors">
             <div className="flex justify-between items-start mb-3">
               <div>
-                <h3 className="font-medium text-lg">{job.company}</h3>
-                <p className="text-white/60">{job.position}</p>
+                <h3 className="font-medium text-lg">{lang === 'zh' ? job.company : job.companyEn}</h3>
               </div>
               <span className="glass px-3 py-1 rounded-full text-xs text-white/50">{job.period}</span>
             </div>
@@ -294,98 +283,36 @@ function WorkExperience({ lang }) {
   );
 }
 
-// 主页面组件
-export default function Home() {
-  const [activeTab, setActiveTab] = useState('intro');
-  const [lang, setLang] = useState('zh');
-
-  const handleExploreClick = () => {
-    const strengthsSection = document.getElementById('core-strengths');
-    if (strengthsSection) {
-      strengthsSection.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
-  const toggleLang = () => {
-    setLang(prev => prev === 'zh' ? 'en' : 'zh');
-  };
-
-  return (
-    <div className="min-h-screen text-white overflow-x-hidden">
-      <AuroraBackground />
-      <CursorGlow />
-      <ClickRipple />
-
-      <header className="fixed top-6 left-0 right-0 z-50 px-4">
-        <div className="glass rounded-full max-w-4xl mx-auto px-6 py-3 flex justify-between items-center">
-          <div className="font-medium text-lg gradient-text">张丽娜</div>
-
-          <div className="flex gap-1 items-center">
-            <TabButton active={activeTab === 'intro'} onClick={() => setActiveTab('intro')} icon={UserIcon} label="Self Intro" />
-            <TabButton active={activeTab === 'projects'} onClick={() => setActiveTab('projects')} icon={CodeBracketIcon} label="Projects" />
-            <TabButton active={activeTab === 'learning'} onClick={() => setActiveTab('learning')} icon={BookOpenIcon} label="AI Library" />
-          </div>
-
-          <button onClick={toggleLang} className="lang-toggle">
-            <GlobeAltIcon className="w-5 h-5" />
-            <span>{lang === 'zh' ? 'EN' : '中文'}</span>
-          </button>
-        </div>
-      </header>
-
-      <main className="pt-20 pb-20">
-        <div className="max-w-7xl mx-auto">
-          {activeTab === 'intro' && (
-            <>
-              <SelfIntro onExploreClick={handleExploreClick} lang={lang} />
-              <div id="core-strengths">
-                <CoreStrengths lang={lang} />
-              </div>
-              <WorkExperience lang={lang} />
-            </>
-          )}
-          {activeTab === 'projects' && <VibeCodingProjects lang={lang} />}
-          {activeTab === 'learning' && <AILearningLibrary lang={lang} />}
-        </div>
-      </main>
-
-      <footer className="relative z-10 text-center py-8 text-white/40 text-sm font-light">
-        <p>© {new Date().getFullYear()} {lang === 'zh' ? '张丽娜' : 'Zhang Lina'}. Made with React & Tailwind CSS</p>
-      </footer>
-    </div>
-  );
-}
-
 // 项目展示组件
 function VibeCodingProjects({ lang }) {
   const projects = lang === 'zh' ? [
     {
-      title: '营销数据中台建设',
-      desc: '基于阿里云 DataWorks 构建营销数据中台，支持日均亿级数据处理，实现数据资产统一管理和高效复用。',
+      title: '人才数据服务',
+      desc: '基于阿里云 DataWorks 构建营销数据中台，支持日均亿级数据处理，实现数据资产统一管理和高效复用',
       tech: ['DataWorks', 'MaxCompute', 'Hologres', 'QuickBI'],
       period: '2024.01 - 2026.04',
       result: '单报表运行时长从 1.5 小时优化至 20 分钟',
       gradient: 'from-blue-500 to-cyan-500'
     },
     {
-      title: '药企数据平台',
-      desc: '为 100+ 药企构建统一数据平台，涵盖理赔、发票、处方等核心业务数据，支持 1.6 万 + 药房标签数据产出。',
+      title: '药企数据服务',
+      desc: '为 100+ 药企构建统一数据平台，涵盖理赔、发票、处方等核心业务数据，支持 1.6 万 + 药房标签数据产出',
       tech: ['Azkaban', 'StarRocks', 'Power BI', 'Shell'],
       period: '2022.04 - 2024.01',
       result: '构建可复用数据模型，效率提升 50%',
       gradient: 'from-purple-500 to-pink-500'
     },
     {
-      title: '新能源汽车数据体系',
-      desc: '构建新能源汽车全生命周期数据报表体系，形成 3 大明细宽表，为总部、区域、经销商提供数字化营销支持。',
+      title: '新能源汽车销售数据服务',
+      desc: '构建新能源汽车全生命周期数据报表体系，形成 3 大明细宽表，为总部、区域、经销商提供数字化营销支持',
       tech: ['DataWorks', 'Hologres', 'OSS', 'Tableau'],
       period: '2021.03 - 2022.04',
       result: '形成 3 大明细宽表，支持数字化营销',
       gradient: 'from-green-500 to-emerald-500'
     },
     {
-      title: '用户画像数仓',
-      desc: '基于 CDH 生态构建用户画像标准数仓，每日处理用户行为数据，支撑运营精准推送。',
+      title: '新能源汽车智能座舱数据服务',
+      desc: '基于 CDH 生态构建用户画像标准数仓，每日处理用户行为数据，支撑运营精准推送',
       tech: ['Hadoop', 'Hive', 'DataX', 'Shell'],
       period: '2019.07 - 2021.03',
       result: '支撑运营精准推送',
@@ -393,32 +320,32 @@ function VibeCodingProjects({ lang }) {
     }
   ] : [
     {
-      title: 'Marketing Data Platform',
-      desc: 'Built marketing data platform on Alibaba Cloud DataWorks, processing hundreds of millions of records daily.',
+      title: 'Talent Data Service',
+      desc: 'Built marketing data platform on Alibaba Cloud DataWorks, processing hundreds of millions of records daily',
       tech: ['DataWorks', 'MaxCompute', 'Hologres', 'QuickBI'],
       period: '2024.01 - 2026.04',
       result: 'Optimized report runtime from 1.5h to 20min',
       gradient: 'from-blue-500 to-cyan-500'
     },
     {
-      title: 'Pharma Data Platform',
-      desc: 'Built unified data platform for 100+ pharma companies, covering claims, invoices, and prescription data.',
+      title: 'Pharma Data Service',
+      desc: 'Built unified data platform for 100+ pharma companies, covering claims, invoices, and prescription data',
       tech: ['Azkaban', 'StarRocks', 'Power BI', 'Shell'],
       period: '2022.04 - 2024.01',
       result: 'Reusable data model, 50% efficiency improvement',
       gradient: 'from-purple-500 to-pink-500'
     },
     {
-      title: 'New Energy Vehicle Data System',
-      desc: 'Built full-lifecycle data reporting system for NEV, creating 3 major detail tables for HQ, regions, and dealers.',
+      title: 'NEV Sales Data Service',
+      desc: 'Built full-lifecycle data reporting system for NEV, creating 3 major detail tables for HQ, regions, and dealers',
       tech: ['DataWorks', 'Hologres', 'OSS', 'Tableau'],
       period: '2021.03 - 2022.04',
       result: '3 major detail tables supporting digital marketing',
       gradient: 'from-green-500 to-emerald-500'
     },
     {
-      title: 'User Persona Data Warehouse',
-      desc: 'Built user persona data warehouse on CDH, processing daily user behavior data for precision marketing.',
+      title: 'NEV Smart Cockpit Data Service',
+      desc: 'Built user persona data warehouse on CDH, processing daily user behavior data for precision marketing',
       tech: ['Hadoop', 'Hive', 'DataX', 'Shell'],
       period: '2019.07 - 2021.03',
       result: 'Supported precision marketing campaigns',
@@ -460,12 +387,13 @@ function VibeCodingProjects({ lang }) {
 // 学习库组件
 function AILearningLibrary({ lang }) {
   const tools = [
-    { name: 'DataWorks', desc: lang === 'zh' ? '一站式大数据开发平台' : 'One-stop big data development platform', icon: '🔧' },
-    { name: 'MaxCompute', desc: lang === 'zh' ? '大规模分布式计算引擎' : 'Large-scale distributed computing engine', icon: '⚡' },
+    { name: lang === 'zh' ? '阿里云大数据平台' : 'Alibaba Cloud Big Data Platform', desc: lang === 'zh' ? 'DataWorks + MaxCompute 一站式大数据开发平台' : 'DataWorks + MaxCompute one-stop platform', icon: '☁️' },
+    { name: 'MapReduce', desc: lang === 'zh' ? '分布式批处理框架' : 'Distributed batch processing framework', icon: '📊' },
     { name: 'Flink', desc: lang === 'zh' ? '流处理框架' : 'Stream processing framework', icon: '🌊' },
     { name: 'Kafka', desc: lang === 'zh' ? '分布式流处理平台' : 'Distributed streaming platform', icon: '📨' },
     { name: 'QuickBI', desc: lang === 'zh' ? '商业分析工具' : 'Business analytics tool', icon: '📊' },
-    { name: lang === 'zh' ? '通义灵码' : 'Tongyi Lingma', desc: lang === 'zh' ? 'AI 辅助编程工具' : 'AI-assisted coding tool', icon: '🤖' }
+    { name: lang === 'zh' ? '通义灵码' : 'Tongyi Lingma', desc: lang === 'zh' ? 'AI 辅助编程工具' : 'AI-assisted coding tool', icon: '🤖' },
+    { name: 'Claude Code', desc: lang === 'zh' ? 'AI 编程助手' : 'AI programming assistant', icon: '🤖' }
   ];
 
   const books = [
@@ -529,6 +457,66 @@ function AILearningLibrary({ lang }) {
         </div>
         <p className="text-center text-white/40 text-sm font-light mt-6">{lang === 'zh' ? '更多内容正在准备中...' : 'More content coming soon...'}</p>
       </section>
+    </div>
+  );
+}
+
+// 主页面组件
+export default function Home() {
+  const [activeTab, setActiveTab] = useState('intro');
+  const [lang, setLang] = useState('zh');
+
+  const handleExploreClick = () => {
+    const strengthsSection = document.getElementById('core-strengths');
+    if (strengthsSection) {
+      strengthsSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const toggleLang = () => {
+    setLang(prev => prev === 'zh' ? 'en' : 'zh');
+  };
+
+  return (
+    <div className="min-h-screen text-white overflow-x-hidden">
+      <AuroraBackground />
+      <CursorGlow />
+      <ClickRipple />
+
+      <header className="fixed top-6 left-0 right-0 z-50 px-4">
+        <div className="glass rounded-full max-w-4xl mx-auto px-6 py-3 flex justify-center items-center gap-6">
+          <div className="flex gap-1 items-center">
+            <TabButton active={activeTab === 'intro'} onClick={() => setActiveTab('intro')} icon={UserIcon} label="Self Intro" />
+            <TabButton active={activeTab === 'projects'} onClick={() => setActiveTab('projects')} icon={CodeBracketIcon} label="Projects" />
+            <TabButton active={activeTab === 'learning'} onClick={() => setActiveTab('learning')} icon={BookOpenIcon} label="AI Library" />
+          </div>
+
+          <button onClick={toggleLang} className="lang-toggle">
+            <GlobeAltIcon className="w-5 h-5" />
+            <span>{lang === 'zh' ? 'EN' : '中文'}</span>
+          </button>
+        </div>
+      </header>
+
+      <main className="pt-20 pb-20">
+        <div className="max-w-7xl mx-auto">
+          {activeTab === 'intro' && (
+            <>
+              <SelfIntro onExploreClick={handleExploreClick} lang={lang} />
+              <div id="core-strengths">
+                <CoreStrengths lang={lang} />
+              </div>
+              <WorkExperience lang={lang} />
+            </>
+          )}
+          {activeTab === 'projects' && <VibeCodingProjects lang={lang} />}
+          {activeTab === 'learning' && <AILearningLibrary lang={lang} />}
+        </div>
+      </main>
+
+      <footer className="relative z-10 text-center py-8 text-white/40 text-sm font-light">
+        <p>© 2026 Lina Zhang. All rights reserved</p>
+      </footer>
     </div>
   );
 }
