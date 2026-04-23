@@ -24,6 +24,19 @@ const nextConfig = {
   // 新增：允许使用原生img标签（跳过图片组件警告）
   images: {
     unoptimized: true,
+  },
+   // 新增：屏蔽恶意扫描路径的安全配置（不影响真人）
+  async headers() {
+    return [
+      {
+        // 匹配常见恶意扫描路径
+        source: "/(wp-*|.env|.env.*|config.php|phpmyadmin|backup|old|sql)",
+        headers: [
+          { key: "X-Robots-Tag", value: "noindex,nofollow" },
+          { key: "Cache-Control", value: "no-store" }
+        ]
+      }
+    ]
   }
 }
 
